@@ -2,9 +2,9 @@ name: Node.js Package
 
 on:
   push:
-    branches: [ master, '**' ]
+    branches: [ "**" ]
   pull_request:
-    branches: [ master, '**' ]
+    branches: [ "**" ]
   workflow_call:
 
 jobs:
@@ -16,4 +16,5 @@ jobs:
         with:
           node-version: 16
       - run: yarn install
+      - run: yarn test:ci
       - run: yarn test
