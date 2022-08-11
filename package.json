@@ -1,0 +1,55 @@
+{
+  "name": "@barracudapff/premiertips-api-client",
+  "version": "0.0.1",
+  "main": "dist/index.min.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "author": {
+    "name": "BarracudaPff",
+    "url": "https://github.com/BarracudaPff",
+    "email": "sup.barracudapff@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/BarracudaPff/premiertips-api-client",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/BarracudaPff/premiertips-api-client/issues",
+    "email": "sup.barracudapff@gmail.com"
+  },
+  "publishConfig": {
+    "@barracudapff:registry": "https://npm.pkg.github.com"
+  },
+  "scripts": {
+    "start": "rollup -c rollup.config.js -w",
+    "build": "rm -rf dist && rollup -c rollup.config.js && yarn make:docs",
+    "make:docs": "typedoc",
+    "test": "jest --coverage",
+    "test:ci": "cross-env CI=1 jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.6",
+    "@types/node": "^18.6.1",
+    "cross-env": "^7.0.3",
+    "jest": "^28.1.3",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "rollup": "^2.77.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.32.1",
+    "ts-jest": "^28.0.7",
+    "tslib": "^2.4.0",
+    "typedoc": "^0.23.9",
+    "typescript": "^4.7.4"
+  }
+}
